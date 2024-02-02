@@ -51,14 +51,14 @@ const FirstSection = () => {
     <div className="flex flex-col md:flex-row gap-x-5 lg:flex-row py-4 px-10 md:px-16 lg:px-36 md:py-20 pb-10  relative ">
       <div
         style={{ width: "1px" }}
-        className=" bg-teal-200 absolute left-7 top-0 h-full"
+        className=" bg-teal-200 absolute left-5 top-0 h-full"
       >
         <div className="h-3 w-3 rounded-full bg-teal-200 absolute -left-1.5 top-20"></div>
       </div>
 
       <div
         style={{ width: "1px" }}
-        className=" bg-teal-200 absolute top-0 right-7 md:left-1/2 h-full"
+        className=" bg-teal-200 absolute top-0 right-7 md:left-1/2 h-full hidden sm:flex"
       >
         <div className="h-3 w-3 rounded-full bg-teal-200 absolute -left-1.5 top-20"></div>
       </div>
@@ -73,7 +73,7 @@ const FirstSection = () => {
           alt="company"
         ></img>
       )}
-      <div className=" sm:w-full md:w-1/2 flex flex-col">
+      <div className=" sm:w-full md:w-1/2 flex flex-col items-start">
         <p className=" heading-text-1 text-sm font-semibold text-white">
           {" "}
           We provide outsourced
@@ -102,7 +102,7 @@ const FirstSection = () => {
             ></FontAwesomeIcon>
           </button>
         </div>
-        <p className="heading-text-1 text-sm font-semibold text-white mt-20 md:mt-40">
+        <p className="heading-text-1 text-sm font-semibold text-white mt-20 md:mt-40 text-start">
           Our team is your trusted partner in offering the best suitable
           solutions for your business. Just get in touch. It's that simple...
         </p>

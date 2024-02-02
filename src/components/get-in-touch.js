@@ -29,8 +29,8 @@ const GetInTouch = () => {
         <div className=" absolute left-6 md:left-96 top-7 blur-sm -rotate-3 border-yellow-500 border-2 h-16 w-16 "></div>
         <div className=" absolute bottom-14 -right-3 blur-sm -rotate-45 border-yellow-500 border-2 h-10 w-10 "></div>
       </div>
-      <p className="text-xl font-semibold text-white "> Get in Touch!</p>
-      <p className="text-sm text-white pt-2">
+      <p className="text-xl font-semibold text-white text-start"> Get in Touch!</p>
+      <p className="text-sm text-white pt-2 text-start">
         {" "}
         For business inquiry, please send email to{" "}
         <span className="text-yellow-500 underline hover:cursor-pointer">

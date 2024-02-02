@@ -58,18 +58,18 @@ const ThirdSection = () => {
     >
       <div
         style={{ width: "1px" }}
-        className=" bg-black absolute left-7 top-0 h-full"
+        className=" bg-black absolute left-5 top-0 h-full"
       >
         <div className="h-3 w-3 rounded-full bg-black absolute -left-1.5 top-20"></div>
       </div>
 
       <div
         style={{ width: "1px" }}
-        className=" bg-black absolute top-0 right-7 md:left-1/2 h-full"
+        className=" bg-black absolute top-0 right-7 md:left-1/2 h-full hidden sm:flex"
       >
         <div className="h-3 w-3 rounded-full bg-black absolute -left-1.5 top-20"></div>
       </div>
-      <div className="w-full md:w-1/2 flex flex-col">
+      <div className="w-full md:w-1/2 flex flex-col items-start">
         <p className="heading-text-1 text-sm font-normal text-orange-400 pb-4">
           {" "}
           WHO WE ARE
@@ -83,12 +83,12 @@ const ThirdSection = () => {
           for your business.
         </p>
 
-        <p className="heading-text-2 text-sm font-semibold text-gray-500 pb-3">
+        <p className="heading-text-2 text-sm font-semibold text-gray-500 pb-3 text-start">
           {" "}
           Since 2023 our company offers top notch IT services for companies all
           over the world.{" "}
         </p>
-        <p className="heading-text-1 text-sm font-normal text-gray-500">
+        <p className="heading-text-1 text-sm font-normal text-gray-500 text-start">
           {" "}
           It provides solutions that develops and manages entire IT service
           delivery process, from request, to research, analysis, issue
@@ -111,7 +111,7 @@ const ThirdSection = () => {
       </div>
       <div className="w-1/2 flex-flex-col md:relative">
         <div className="header-box h-52 w-52 md:absolute  md:left-48 md:bottom-20  border-solid border-8 border-teal-300 ml-20 mb-11"></div>
-         <div className="absolute md: left-12 bottom-0 md:left-7 md:-bottom-10 grid grid-cols-7 w-28">
+        <div className="absolute md: left-12 bottom-0 md:left-7 md:-bottom-10 grid grid-cols-7 w-28">
           {dots.map((e) => (
             <p className="header-data text-4xl text-teal-400">{e}</p>
           ))}
@@ -120,7 +120,7 @@ const ThirdSection = () => {
           className="header-image-3 absolute left-20 bottom-6 md:left-14 md:bottom-0 h-48 w-full md:h-72 md:w-72 object-cover rounded-3xl"
           src="https://images.pexels.com/photos/7693698/pexels-photo-7693698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="team"
-        ></img> 
+        ></img>
       </div>
     </div>
   );

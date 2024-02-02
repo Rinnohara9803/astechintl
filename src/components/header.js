@@ -38,7 +38,7 @@ const TheHeader = () => {
         <div className="border-2 border-yellow-500 ml-5 px-2 py-1 text-yellow-500 hover:scale-105 cursor-pointer transition-all duration-700">
           AS
         </div>
-        <div className="flex flex-col font-semibold">
+        <div className="flex flex-col font-semibold items-start">
           <p className="text-teal-400">
             AS <span className="text-slate-300">Tech</span>{" "}
           </p>

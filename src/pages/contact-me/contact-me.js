@@ -154,10 +154,10 @@
             <div className=" absolute left-28  md:left-14 blur-sm top-20 -rotate-45 border-black border-2 h-24 w-24 "></div>
             <div className=" absolute left-6 md:left-96 top-7 blur-sm -rotate-3 border-black border-2 h-16 w-16 "></div>
             <div className=" absolute top-14 -left-3 blur-sm -rotate-45 border-black border-2 h-10 w-10 "></div>
-            <p className="text-black font-semibold text-2xl"> Contact Us</p>
+            <p className="text-black font-semibold text-2xl text-start"> Contact Us</p>
             <div className="relative">
               <input
-                className="rounded-sm w-full py-2 pl-10 bg-slate-200 opacity-75"
+                className="rounded-sm w-full py-2 pl-10 bg-slate-200 opacity-75 placeholder-gray-500"
                 value={contactInfo.name}
                 type="text"
                 placeholder="Name"
@@ -166,14 +166,14 @@
                 }}
               ></input>
               <FontAwesomeIcon
-                className="absolute left-3 top-3 text-gray-500"
+                className="absolute left-3 top-3 text-gray-500 "
                 icon={faUser}
               ></FontAwesomeIcon>
             </div>
             <div className="relative">
               <input
                 value={contactInfo.email}
-                className="rounded-sm w-full py-2 bg-slate-200 opacity-75 pl-10"
+                className="rounded-sm w-full py-2 bg-slate-200 opacity-75 pl-10 placeholder-gray-500"
                 type="email"
                 placeholder="Email"
                 onChange={(event) => {
@@ -188,7 +188,7 @@
             <textarea
               cols={3}
               value={contactInfo.description}
-              className="rounded-sm w-full py-2 bg-slate-200 opacity-75 pl-5"
+              className="rounded-sm w-full py-2 bg-slate-200 opacity-75 pl-5 placeholder-gray-500"
               type="text"
               placeholder="Message"
               onChange={(event) => {
@@ -201,7 +201,7 @@
 
             <button
               onClick={submitContactForm}
-              className="text-center border-2 border-solid border-black text-black hover:bg-black hover:text-white py-2 rounded-lg transition-all ease-in-out duration-700"
+              className="text-center border-2 border-solid border-black text-black hover:bg-black hover:text-white py-2 rounded-sm transition-all ease-in-out duration-700"
             >
               {" "}
               Send Email
@@ -209,7 +209,7 @@
           </div>
           {windowWidth > 800 && (
             <div className="md:w-4/5 lg:w-2/5 bg-slate-800 h-96 flex flex-col justify-around pl-10 py-3">
-              <p className="text-white font-semibold text-lg">
+              <p className="text-white font-semibold text-lg text-start">
                 {" "}
                 Contact Information
               </p>

@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-zinc-900 shawdow sm:w-full px-20 flex flex-col lg:flex-row lg:justify-around md:px-36 py-20 md:py-10">
+    <div className="bg-zinc-900 shawdow sm:w-full px-10 md:px-16 flex flex-col lg:flex-row lg:justify-around py-20 md:py-10">
       {/* first */}
       <div className=" flex flex-col justify-start text-start">
         <h2 className="text-white font-semibold">AS Tech International</h2>
@@ -114,17 +114,17 @@ const Footer = () => {
 
       <div className="flex flex-col justify-start items-start text-white gap-y-3 pt-5 md:pt-0">
       <div className="pb-4 flex flex-col">
-          <p className="font-semibold text-lg "> Support </p>
+          <p className="font-semibold text-lg "> Work with us </p>
           <div className="h-0.5 w-9 bg-white mt-1"></div>
         </div>
 
         <p className=" transition-all hover:underline cursor-pointer hover:text-teal-300">
           {" "}
-          Donate{" "}
+          Careers{" "}
         </p>
         <p className=" transition-all hover:underline cursor-pointer hover:text-teal-300">
           {" "}
-          About Us
+          Internships
         </p>
       </div>
     </div>

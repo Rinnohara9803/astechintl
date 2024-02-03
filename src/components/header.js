@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import logo from "../images/logo.png";
 
 const TheHeader = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -34,15 +35,13 @@ const TheHeader = () => {
           className="fixed h-full w-full bg-black opacity-30 top-0 left-0"
         ></div>
       )}
-      <div className="flex flex-row justify-start items-center gap-x-4">
-        <div className="border-2 border-yellow-500 ml-5 px-2 py-1 text-yellow-500 hover:scale-105 cursor-pointer transition-all duration-700">
-          AS
-        </div>
-        <div className="flex flex-col font-semibold items-start">
-          <p className="text-teal-400">
+      <div className="flex flex-row justify-start items-center gap-x-4 ">
+          <img className="transition-all duration-1000 cursor-pointer hover:scale-110 h-12 w-12" src={logo} alt="logo"></img>
+        <div className="flex flex-col font-semibold items-start tracking-wider">
+          <p className="text-cyan-700">
             AS <span className="text-slate-300">Tech</span>{" "}
           </p>
-          <p className="text-teal-400"> International</p>
+          <p className="text-cyan-700"> International</p>
         </div>
       </div>
 

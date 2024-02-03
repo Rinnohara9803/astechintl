@@ -20,6 +20,17 @@
   opacity: 1;
 }
 
+.header-image-0 {
+  transition: all 1.5s ease; /* Add a transition for the transform property */
+  transform: translateX(-30%);
+  opacity: 0.1;
+}
+
+.header-image-0-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .header-image-1 {
   transition: all 1.5s ease; /* Add a transition for the transform property */
   transform: translateX(30%);
@@ -91,6 +102,17 @@
 }
 
 .block3-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.block4 {
+  transition: all 4s ease;
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+
+.block4-active {
   transform: translateX(0);
   opacity: 1;
 }

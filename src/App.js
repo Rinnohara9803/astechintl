@@ -1,13 +1,14 @@
-import './App.css';
-import { Routes, Route, Navigate} from 'react-router';
-import { Toaster } from 'react-hot-toast';
+import "./App.css";
+import { Routes, Route, Navigate } from "react-router";
+import { Toaster } from "react-hot-toast";
 import Home from "./pages/home/home";
 import ContactMe from "./pages/contact-me/contact-me";
 import GetInTouch from "./components/get-in-touch";
 import AboutMe from "./pages/about-me/about-me";
 import MyWorks from "./pages/works/works";
 import ProjectDetails from "./pages/works/project-details";
-import TheHeader from './components/header';
+import TheHeader from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -63,7 +64,7 @@ function App() {
             element={<ProjectDetails />}
           ></Route>
         </Routes>
-        <GetInTouch></GetInTouch>
+        <Footer></Footer>
       </div>
     </div>
   );

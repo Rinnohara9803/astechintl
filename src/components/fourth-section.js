@@ -65,12 +65,12 @@ const FourthSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-zinc-800 py-4 pt-16 px-10 md:px-36 md:py-20 justify-center">
+    <div className="flex flex-col bg-zinc-800 py-10 pt-16 px-10 md:px-36 md:py-32 justify-center">
       <p className="header-image-3 text-white font-semibold text-3xl  pb-4 text-center">
         {" "}
         Our Tools and Technologies
       </p>
-      <div className="header-data flex flex-row justify-center pb-7">
+      <div className="header-image-3 flex flex-row justify-center pb-7">
         <div className="header-image-3 h-1 w-20 bg-teal-300 "></div>
       </div>
       <div className="header-image-3">

@@ -4,6 +4,7 @@ import ThirdSection from "../../components/third-section";
 import FourthSection from "../../components/fourth-section";
 import { useDispatch } from "react-redux";
 import { lineSliceActions } from "../../slices/line-slice";
+import FifthSection from "../../components/fifth-section";
 
 const Home = () => {
   const scrollRef = useRef(0);
@@ -29,6 +30,7 @@ const Home = () => {
       <FirstSection></FirstSection>
       <ThirdSection></ThirdSection>
       <FourthSection></FourthSection>
+      <FifthSection></FifthSection>
     </div>
   );
 };

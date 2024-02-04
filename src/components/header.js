@@ -26,7 +26,7 @@ const TheHeader = () => {
   }, []);
 
   return (
-    <div className="flex flex-row justify-between top-0 bg-zinc-800 px-5 py-4 z-40 sticky border-solid border-b-2 border-teal-200">
+    <div className="flex flex-row justify-between items-center top-0 bg-zinc-800 px-5 py-4 z-40 sticky  shadow-white shadow-sm">
       {showMenu && (
         <div
           onClick={() => {
@@ -36,7 +36,11 @@ const TheHeader = () => {
         ></div>
       )}
       <div className="flex flex-row justify-start items-center gap-x-4 ">
-          <img className="transition-all duration-1000 cursor-pointer hover:scale-110 h-12 w-12" src={logo} alt="logo"></img>
+        <img
+          className="transition-all duration-1000 cursor-pointer hover:scale-110 h-12 w-12"
+          src={logo}
+          alt="logo"
+        ></img>
         <div className="flex flex-col font-semibold items-start tracking-wider">
           <p className="text-cyan-700">
             AS <span className="text-slate-300">Tech</span>{" "}
@@ -70,7 +74,7 @@ const TheHeader = () => {
                   toggleMenu();
                 }}
                 to="/home"
-                className="text-white hover:text-orange-400 transition-all duration-300"
+                className="text-white hover:text-cyan-400 transition-all duration-300"
               >
                 Home
               </Link>
@@ -79,16 +83,16 @@ const TheHeader = () => {
                   toggleMenu();
                 }}
                 to="/my-works"
-                className="text-white hover:text-orange-400 transition-all duration-300"
+                className="text-white hover:text-cyan-400 transition-all duration-300"
               >
-                Projects
+                Services
               </Link>
               <Link
                 onClick={() => {
                   toggleMenu();
                 }}
                 to="/about-me"
-                className="text-white hover:text-orange-400 transition-all duration-300"
+                className="text-white hover:text-cyan-400 transition-all duration-300"
               >
                 About Us
               </Link>
@@ -97,7 +101,7 @@ const TheHeader = () => {
                   toggleMenu();
                 }}
                 to="/contact-me"
-                className="text-white hover:text-orange-400 transition-all duration-300"
+                className="text-white hover:text-cyan-400 transition-all duration-300"
               >
                 Contact
               </Link>
@@ -112,8 +116,8 @@ const TheHeader = () => {
             to="/home"
             className={(navData) =>
               navData.isActive
-                ? "mr-7 text-orange-500 hover:text-orange-400 transition-all duration-300"
-                : "mr-7 text-white hover:text-orange-400  border-orange-500 transition-all duration-300"
+                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
+                : "tracking-wider mr-7 text-white hover:text-cyan-400  border-cyan-500 transition-all duration-300"
             }
           >
             Home
@@ -123,19 +127,19 @@ const TheHeader = () => {
             to="/my-works"
             className={(navData) =>
               navData.isActive
-                ? "mr-7 text-orange-500 hover:text-orange-400 transition-all duration-300"
-                : "mr-7 text-white hover:text-orange-400  border-orange-500 transition-all duration-300"
+                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
+                : "tracking-wider mr-7 text-white hover:text-cyan-400  border-cyan-500 transition-all duration-300"
             }
           >
-            Projects
+            Services
           </NavLink>
           <NavLink
             onClick={() => {}}
             to="/about-me"
             className={(navData) =>
               navData.isActive
-                ? "mr-7 text-orange-500 hover:text-orange-400 transition-all duration-300"
-                : "mr-7 text-white hover:text-orange-400  border-orange-500 transition-all duration-300"
+                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
+                : "tracking-wider mr-7 text-white hover:text-cyan-400  border-cyan-500 transition-all duration-300"
             }
           >
             About Us
@@ -145,8 +149,8 @@ const TheHeader = () => {
             to="/contact-me"
             className={(navData) =>
               navData.isActive
-                ? "mr-7 text-orange-500 hover:text-orange-400 transition-all duration-300"
-                : "mr-7 text-white hover:text-orange-400 transition-all duration-300"
+                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
+                : "tracking-wider mr-7 text-white hover:text-cyan-400 transition-all duration-300"
             }
           >
             Contact

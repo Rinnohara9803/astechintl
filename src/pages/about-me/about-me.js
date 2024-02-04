@@ -209,7 +209,7 @@ const AboutMe = () => {
 
       {/* thesection */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-20 w-full">
-        <div className="block1 flex flex-col gap-y-3 border border-solid border-white hover:bg-cyan-700 hover:border-cyan-700 rounded-md py-8 hover:scale-105 cursor-pointer  duration-300 hover:shadow-md hover:shadow-slate-300">
+        <div className="block1 flex flex-col gap-y-3   bg-gray-800 border border-solid border-white rounded-md py-8 cursor-pointer  duration-300 ">
           <FontAwesomeIcon
             className="text-slate-100 text-5xl"
             icon={faCalendarAlt}
@@ -219,7 +219,7 @@ const AboutMe = () => {
             Years of operation
           </p>
         </div>
-        <div className="block2 flex flex-col gap-y-3 hover:bg-violet-700 hover:border-violet-700 border border-solid border-white rounded-md py-8 hover:scale-105 cursor-pointer duration-300 hover:shadow-md hover:shadow-slate-300 ">
+        <div className="block2 flex flex-col gap-y-3 bg-gray-800 border border-solid border-white  rounded-md py-8 cursor-pointer duration-300  ">
           <FontAwesomeIcon
             className="text-slate-100 text-5xl"
             icon={faUsers}
@@ -229,7 +229,7 @@ const AboutMe = () => {
             Skilled Professionals
           </p>
         </div>
-        <div className="block3 flex flex-col gap-y-3 hover:bg-red-700 hover:border-red-700 border border-solid border-white rounded-md py-8 hover:scale-105 cursor-pointer duration-300 hover:shadow-md hover:shadow-slate-300">
+        <div className="block3 flex flex-col gap-y-3 bg-gray-800 border border-solid border-white  rounded-md py-8 cursor-pointer duration-300 ">
           <FontAwesomeIcon
             className="text-slate-100 text-5xl"
             icon={faSmile}
@@ -239,7 +239,7 @@ const AboutMe = () => {
             Satisfied Clients
           </p>
         </div>
-        <div className="block4 flex flex-col gap-y-3 hover:bg-green-700 hover:border-green-700 border border-solid border-white rounded-md py-8 hover:scale-105 cursor-pointer duration-300 hover:shadow-md hover:shadow-slate-300">
+        <div className="block4 flex flex-col gap-y-3 bg-gray-800 border border-solid border-white  rounded-md py-8 cursor-pointer duration-300 ">
           <FontAwesomeIcon
             className="text-slate-100 text-5xl"
             icon={faUser}

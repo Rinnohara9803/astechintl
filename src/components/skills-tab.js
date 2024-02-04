@@ -3,17 +3,20 @@ import TheServices from "./service";
 import {
   faBug,
   faCloud,
+  faCode,
   faComputer,
   faDatabase,
   faInfinity,
   faMobileAlt,
   faPencilSquare,
   faTableCells,
+  faTools,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
-import { faUikit } from "@fortawesome/free-brands-svg-icons";
+import { faDeploydog, faUikit } from "@fortawesome/free-brands-svg-icons";
 import Stacks from "./stacks";
 import "../css/about-me.css";
+import Practices from "./practices";
 
 const SkillsTab = () => {
   const [selectedTab, setSelectedTab] = useState("What we build");
@@ -74,17 +77,16 @@ const SkillsTab = () => {
 
   return (
     <div className="flex flex-col w-full bg-slate-100 md:py-20 pb-10 pt-16">
-      <p className="header-image-2 tracking-widest font-semibold text-4xl text-black mb-10 leading-3 px-10 md:px-16 lg:px-36 ">
+      <p className="header-image-2 tracking-widest font-semibold text-4xl text-black mb-10  px-10 md:px-16 lg:px-36 ">
         {" "}
         <span className="text-cyan-700">Skills</span> at a glance
       </p>
       <p className="heading-text-2 tracking-widest font-normal text-xl text-black mb-16 px-10 md:px-16 lg:px-36 ">
-        {" "}
         We support breadth of technologies, best practice, use cases and
         industries. Here are some of them{" "}
       </p>
       <div
-        className={` flex bg-slate-100 text-black flex-row justify-center gap-x-20 z-20 pt-4 px-10 md:px-16 lg:px-36 w-full border-b-2 border-black overflow-x-auto  ${
+        className={`flex bg-slate-100 text-black flex-row justify-center gap-x-8 md:gap-x-20 z-20 pt-4 px-10 md:px-16 lg:px-36 w-full border-b-2 border-black overflow-x-auto ${
           isFixed ? "sticky top-20" : "sticky top-0"
         }`}
       >
@@ -232,7 +234,81 @@ const SkillsTab = () => {
           </div>
         )}
         {selectedTab === "Practices" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16 mt-10 w-full items-start">
+            <Practices
+              icon={faComputer}
+              title="Validated Designs"
+              list={[
+                {
+                  name: "Discover",
+                  description:
+                    "We believe every innovation begins by understanding your business, its goals, and your users problems.",
+                },
+                {
+                  name: "Design Sprint",
+                  description:
+                    "Sketching and wireframing key workflows, often multiple variations, until we have some that feel right.",
+                },
+                {
+                  name: "Prototype & Validate",
+                  description:
+                    "We deliver interactive, clickable screens of how final application would look and validate them with stakeholders and users.",
+                },
+              ]}
+            ></Practices>
+            <Practices
+              icon={faCode}
+              title="Rock Solid Code"
+              list={[
+                {
+                  name: "Security",
+                  description:
+                    "We take security and compliance seriously, and we prepare our people for it. From SOC2 to HIPAA to PCI, your team is ready keep your company and users safe.",
+                },
+                {
+                  name: "Mandatory code review",
+                  description:
+                    "All work goes through a mandatory code review for best practices.",
+                },
+                {
+                  name: "Idiomatic code",
+                  description:
+                    "We adopt standards or code idioms depending on the language or framework.",
+                },
+                {
+                  name: "Rigorous QA",
+                  description:
+                    "Your code is tested by both QA and automated scripts before your users ever see it.",
+                },
+              ]}
+            ></Practices>
+            <Practices
+              icon={faTools}
+              title="Build and Deploy"
+              list={[
+                {
+                  name: "Good Documentation",
+                  description:
+                    "We follow  good documentation practices for better collaboration in commit, code and pull requests.",
+                },
+                {
+                  name: "Continuous Integration",
+                  description:
+                    "Continuous integration is tied into rejections of merges and warning messages that are broadcast on Slack.",
+                },
+                {
+                  name: "Source Control",
+                  description:
+                    "Source control practices include code, good documentation, and infrastructure as code too.",
+                },
+                {
+                  name: "Deployment and Monitoring",
+                  description:
+                    "We monitor apps and services to detect issues and scale when needed.",
+                },
+              ]}
+            ></Practices>
+          </div>
         )}
       </div>
     </div>

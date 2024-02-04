@@ -54,7 +54,7 @@ const ThirdSection = () => {
   return (
     <div
       // style={{ width: "100vw" }}
-      className="flex flex-col md:flex-row gap-y-14 justify-between gap-x-10 bg-slate-50 py-4 px-10 md:px-36 md:py-48 relative"
+      className="flex flex-col md:flex-row gap-y-14 justify-between gap-x-10 bg-slate-50 py-4 px-10 md:px-36 md:py-48 relative overflow-hidden"
     >
       <div
         style={{ width: "1px" }}

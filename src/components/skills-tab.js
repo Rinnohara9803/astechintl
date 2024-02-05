@@ -94,7 +94,7 @@ const SkillsTab = () => {
           onClick={() => {
             setSelectedTab("What we build");
           }}
-          className={`text-black tracking-wider cursor-pointer text-xl pb-3 ${
+          className={`text-black tracking-wider cursor-pointer  text-sm md:text-xl pb-3 ${
             selectedTab === "What we build"
               ? "border-b-4 font-semibold  text-cyan-700"
               : "border-b-0"
@@ -107,7 +107,7 @@ const SkillsTab = () => {
           onClick={() => {
             setSelectedTab("Technology-Stacks");
           }}
-          className={`text-black tracking-wider cursor-pointer text-xl pb-3 ${
+          className={`text-black tracking-wider cursor-pointer text-sm md:text-xl pb-3 ${
             selectedTab === "Technology-Stacks"
               ? "border-b-4 font-semibold text-cyan-700"
               : "border-b-0"
@@ -120,7 +120,7 @@ const SkillsTab = () => {
           onClick={() => {
             setSelectedTab("Practices");
           }}
-          className={`text-black tracking-wider cursor-pointer text-xl pb-3 ${
+          className={`text-black tracking-wider cursor-pointer  text-sm md:text-xl pb-3 ${
             selectedTab === "Practices"
               ? "border-b-4 font-semibold text-cyan-700"
               : "border-b-0"

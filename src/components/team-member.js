@@ -1,10 +1,39 @@
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 
 const TeamMember = ({ name, img, jobTitle, description, lnlink }) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(
+              "heading-text-1-active",
+              "heading-text-2-active",
+              "header-image-0-active",
+              "header-image-1-active",
+              "header-image-2-active",
+              "header-data-active",
+              "block1-active",
+              "block2-active",
+              "block3-active",
+              "block4-active"
+            );
+          } else {
+          }
+        });
+      },
+      { threshold: 0.2, root: null }
+    );
+    const hiddenElements = document.querySelectorAll(
+      ".heading-text-1, .heading-text-2, .header-image-0, .header-image-1, .header-image-2, .header-data, .block1, .block2, .block3, .block4"
+    );
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="header-data flex flex-col justify-center items-center">
       <div className="h-64 w-60 relative">
         <img
           src={img}

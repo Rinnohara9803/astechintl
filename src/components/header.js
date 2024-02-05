@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCalculator,
+  faMobileAlt,
+  faPhoneAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/logo.png";
 
 const TheHeader = () => {
@@ -110,9 +115,8 @@ const TheHeader = () => {
         </>
       )}
       {windowWidth >= 800 && (
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center gap-x-2 md:gap-x-4 lg:gap-x-7">
           <NavLink
-            onClick={() => {}}
             to="/home"
             className={(navData) =>
               navData.isActive
@@ -123,7 +127,6 @@ const TheHeader = () => {
             Home
           </NavLink>
           <NavLink
-            onClick={() => {}}
             to="/my-works"
             className={(navData) =>
               navData.isActive
@@ -134,7 +137,6 @@ const TheHeader = () => {
             Services
           </NavLink>
           <NavLink
-            onClick={() => {}}
             to="/about-me"
             className={(navData) =>
               navData.isActive
@@ -145,15 +147,15 @@ const TheHeader = () => {
             About Us
           </NavLink>
           <NavLink
-            onClick={() => {}}
             to="/contact-me"
             className={(navData) =>
               navData.isActive
-                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
-                : "tracking-wider mr-7 text-white hover:text-cyan-400 transition-all duration-300"
+                ? "flex flex-row justify-center items-center gap-x-4 tracking-wider mr-7 text-white font-semibold hover:bg-black transition-all duration-1000 bg-cyan-700 px-5 py-3"
+                : "flex flex-row justify-center items-center gap-x-4 tracking-wider mr-7 text-white  transition-all duration-300 bg-cyan-700 px-5 py-3 hover:bg-black"
             }
           >
-            Contact
+            <FontAwesomeIcon icon={faCalculator}></FontAwesomeIcon>
+            <p> Contact Us</p>
           </NavLink>
         </div>
       )}

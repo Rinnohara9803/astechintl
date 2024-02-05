@@ -65,7 +65,7 @@ const ThirdSection = () => {
 
       <div
         style={{ width: "1px" }}
-        className=" bg-black absolute top-0 right-7 md:left-1/2 h-full hidden sm:flex"
+        className=" bg-black absolute top-0 right-7 md:left-1/2 h-full hidden md:flex"
       >
         <div className="h-3 w-3 rounded-full bg-black absolute -left-1.5 top-20"></div>
       </div>

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "../css/about-me.css";
+import "../css/about-us.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComputerMouse } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router";
 
 const FourthSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,7 +43,7 @@ const FourthSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-x-9 bg-zinc-800 px-10 md:px-16 lg:px-36 justify-center py-10">
+    <div className="flex flex-col-reverse lg:flex-row gap-x-9 bg-zinc-800 px-10 md:px-16 lg:px-36 justify-center py-10">
       <div className="header-data  w-full lg:w-1/2  flex flex-row justify-center items-center relative overflow-hidden">
         <img
           src="https://www.shutterstock.com/image-photo/group-african-american-business-workers-600nw-2019273542.jpg"
@@ -71,7 +74,9 @@ const FourthSection = () => {
           pride ourselves on earning your trust, providing demonstrable value,
           and being great at what we do - together.{" "}
         </p>
-        <div className="header-data flex flex-row bg-cyan-700 px-5 py-4 hover:bg-zinc-900 gap-x-5 items-center transition-all ease-in-out text-white cursor-pointer duration-700">
+        <div onClick={() => {
+          navigate('/contact-us');
+        }} className="header-data flex flex-row bg-cyan-700 px-5 py-4 hover:bg-zinc-900 gap-x-5 items-center transition-all ease-in-out text-white cursor-pointer duration-700">
           <FontAwesomeIcon
             icon={faComputerMouse}
             className="text-white text-xl"

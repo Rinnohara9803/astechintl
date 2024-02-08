@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../css/about-me.css";
+import "../css/about-us.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/about-me.css";
+import "../css/about-us.css";
 import Questions from "./question";
 
 const FifthSection = () => {

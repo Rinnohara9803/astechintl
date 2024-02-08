@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../../css/about-me.css";
+import "../../css/about-us.css";
 import "../../css/animate-text.css";
 import ContactForm from "../../components/contact-form";
 
@@ -41,7 +41,7 @@ const ContactMe = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    // window.scrollTo(0, scrollRef.current);
+    window.scrollTo(0, scrollRef.current);
 
     return () => {
       window.removeEventListener("resize", handleResize);

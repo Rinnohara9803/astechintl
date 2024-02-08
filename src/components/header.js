@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faCalculator,
-  faMobileAlt,
-  faPhoneAlt,
+  faPersonHiking,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/logo.png";
+import HoverComp from "./hover-comp";
 
 const TheHeader = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -25,6 +26,7 @@ const TheHeader = () => {
     };
 
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -32,6 +34,14 @@ const TheHeader = () => {
 
   return (
     <div className="flex flex-row justify-between items-center top-0 bg-zinc-800 px-5 py-4 z-40 sticky  shadow-white shadow-sm">
+      {isHovered && (
+        <div
+          onClick={() => {
+            setIsHovered(false);
+          }}
+          className="fixed h-full w-full bg-black opacity-30 top-0 left-0"
+        ></div>
+      )}
       {showMenu && (
         <div
           onClick={() => {
@@ -87,16 +97,16 @@ const TheHeader = () => {
                 onClick={() => {
                   toggleMenu();
                 }}
-                to="/my-works"
+                to="/join-us"
                 className="text-white hover:text-cyan-400 transition-all duration-300"
               >
-                Services
+                Join Us
               </Link>
               <Link
                 onClick={() => {
                   toggleMenu();
                 }}
-                to="/about-me"
+                to="/about-us"
                 className="text-white hover:text-cyan-400 transition-all duration-300"
               >
                 About Us
@@ -105,7 +115,7 @@ const TheHeader = () => {
                 onClick={() => {
                   toggleMenu();
                 }}
-                to="/contact-me"
+                to="/contact-us"
                 className="text-white hover:text-cyan-400 transition-all duration-300"
               >
                 Contact
@@ -127,17 +137,25 @@ const TheHeader = () => {
             Home
           </NavLink>
           <NavLink
-            to="/my-works"
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onClick={() => {
+              setIsHovered(false);
+            }}
+            to="/join-us"
             className={(navData) =>
               navData.isActive
-                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
-                : "tracking-wider mr-7 text-white hover:text-cyan-400  border-cyan-500 transition-all duration-300"
+                ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300 relative"
+                : "tracking-wider mr-7 text-white hover:text-cyan-400  border-cyan-500 transition-all duration-300 relative"
             }
           >
-            Services
+            Join Us
+            {isHovered && <HoverComp setIsHovered={setIsHovered}></HoverComp>}
           </NavLink>
+
           <NavLink
-            to="/about-me"
+            to="/about-us"
             className={(navData) =>
               navData.isActive
                 ? "tracking-wider mr-7 text-cyan-600 font-semibold hover:text-cyan-400 transition-all duration-300"
@@ -147,7 +165,7 @@ const TheHeader = () => {
             About Us
           </NavLink>
           <NavLink
-            to="/contact-me"
+            to="/contact-us"
             className={(navData) =>
               navData.isActive
                 ? "flex flex-row justify-center items-center gap-x-4 tracking-wider mr-7 text-white font-semibold hover:bg-black transition-all duration-1000 bg-cyan-700 px-5 py-3"

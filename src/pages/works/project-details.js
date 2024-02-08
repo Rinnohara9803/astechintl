@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 // import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import "../../css/about-me.css";
+import "../../css/about-us.css";
 
 const ProjectDetails = () => {
   //   const { projectname } = useParams();

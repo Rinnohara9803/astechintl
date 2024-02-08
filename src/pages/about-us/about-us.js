@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../../css/about-me.css";
+import "../../css/about-us.css";
 
 import AbFirst from "../../components/ab-first";
 import AbSecond from "../../components/ab-second";

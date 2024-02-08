@@ -15,7 +15,7 @@ import {
 import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 import { faDeploydog, faUikit } from "@fortawesome/free-brands-svg-icons";
 import Stacks from "./stacks";
-import "../css/about-me.css";
+import "../css/about-us.css";
 import Practices from "./practices";
 
 const SkillsTab = () => {

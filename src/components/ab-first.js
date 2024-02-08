@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import codingBoy from "../images/coding-boy.png";
 import { useNavigate } from "react-router";
-import "../css/about-me.css";
+import "../css/about-us.css";
 import '../css/animate-text.css'
 
 const AbFirst = () => {
   const navigate = useNavigate();
 
   const navigateToContactMe = () => {
-    navigate("/contact-me");
+    navigate("/contact-us");
   };
 
   useEffect(() => {

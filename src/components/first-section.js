@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../css/about-me.css";
+import "../css/about-us.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";

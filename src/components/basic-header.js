@@ -72,14 +72,14 @@ const TheHeader1 = () => {
               </Link>
               <Link
                 onClick={toggleMenu}
-                to="/about-me"
+                to="/about-us"
                 className="text-white hover:text-orange-400 transition-all duration-300"
               >
                 About Me
               </Link>
               <Link
                 onClick={toggleMenu}
-                to="/contact-me"
+                to="/contact-us"
                 className="text-white hover:text-orange-400 transition-all duration-300"
               >
                 Contact
@@ -111,7 +111,7 @@ const TheHeader1 = () => {
             Projects
           </NavLink>
           <NavLink
-            to="/about-me"
+            to="/about-us"
             className={(navData) =>
               navData.isActive
                 ? "mr-7 text-orange-500 hover:text-orange-400 border-b-4  border-orange-500 transition-all duration-300"
@@ -121,7 +121,7 @@ const TheHeader1 = () => {
             About Us
           </NavLink>
           <NavLink
-            to="/contact-me"
+            to="/contact-us"
             className={(navData) =>
               navData.isActive
                 ? "mr-7 text-orange-500 hover:text-orange-400 border-b-4  border-orange-500 transition-all duration-300"
